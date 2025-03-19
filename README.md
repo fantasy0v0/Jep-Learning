@@ -1,4 +1,3 @@
-# JEP 499: Structured Concurrency
+# JEPs
 
-https://openjdk.org/jeps/499
-
+- [ ] [JEP 499: Structured Concurrency](https://openjdk.org/jeps/499)

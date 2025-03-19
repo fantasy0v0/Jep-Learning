@@ -1,4 +1,4 @@
-package jep_learning;
+package jep_learning.jep499;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +9,7 @@ import java.util.concurrent.Future;
 
 import static jep_learning.util.LoggerUtil.log;
 
-public class JepTest {
+public class Jep499Test {
 
   @Test
   void unstructured() throws ExecutionException, InterruptedException {

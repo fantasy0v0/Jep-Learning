@@ -1,4 +1,4 @@
-package jep_learning;
+package jep_learning.jep499;
 
 import java.security.SecureRandom;
 import java.util.Random;
