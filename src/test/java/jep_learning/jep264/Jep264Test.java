@@ -1,6 +1,5 @@
 package jep_learning.jep264;
 
-import jep_learning.jep259.Jep259Test;
 import org.junit.jupiter.api.Test;
 
 /**
