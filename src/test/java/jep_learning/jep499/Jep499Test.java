@@ -2,10 +2,8 @@ package jep_learning.jep499;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
+import java.util.function.Supplier;
 
 import static jep_learning.util.LoggerUtil.log;
 
@@ -23,8 +21,14 @@ public class Jep499Test {
   }
 
   @Test
-  void structured() {
-    // TODO
+  void structured() throws InterruptedException {
+    try (var scope = StructuredTaskScope.open()) {
+      Supplier<String> user = scope.fork(Tasks::findUser);
+      Supplier<Integer> order = scope.fork(Tasks::fetchOrder);
+      scope.join();
+      String result = user.get() + " " + order.get();
+      log.info("Result: {}", result);
+    }
   }
 
 }
